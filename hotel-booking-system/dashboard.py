@@ -60,6 +60,65 @@ class DashboardWindow(QWidget):
         logout_button.clicked.connect(self.logout)
         main_layout.addWidget(logout_button)
 
+        self.setStyleSheet("""
+    QWidget {
+        background-color: #f5f7fb;
+        color: #222222;
+        font-size: 14px;
+    }
+
+    QLabel {
+        color: #333333;
+        padding: 3px;
+    }
+
+    QLineEdit, QComboBox, QDateEdit {
+        background-color: white;
+        color: #222222;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        padding: 7px;
+    }
+
+    QPushButton {
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 15px;
+        font-weight: bold;
+    }
+
+    QPushButton:hover {
+        background-color: #1d4ed8;
+    }
+
+    QTableWidget {
+        background-color: white;
+        color: #222222;
+        gridline-color: #d1d5db;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+    }
+
+    QTableWidget::item {
+        padding: 6px;
+    }
+
+    QTableWidget::item:selected {
+        background-color: #dbeafe;
+        color: #1e3a8a;
+    }
+
+    QHeaderView::section {
+        background-color: #1e3a8a;
+        color: white;
+        padding: 8px;
+        font-weight: bold;
+        border: none;
+    }
+""")
+
         self.setLayout(main_layout)
         self.load_rooms()
         self.load_bookings()
