@@ -28,12 +28,7 @@ A Python desktop Hotel Booking Management System using PyQt5 and SQLite3.
 - password
 - email
 
-### rooms
-- room_id
-- room_number
-- room_type
-- price
-- status
+
 
 ### bookings
 - booking_id
